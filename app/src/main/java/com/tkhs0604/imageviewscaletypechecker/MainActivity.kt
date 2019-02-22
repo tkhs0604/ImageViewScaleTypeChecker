@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun switchScaleType(imageView: ImageView) {
+        imageView.imageMatrix = null
         imageView.scaleType = when (imageView.scaleType) {
             CENTER        -> CENTER_CROP
             CENTER_CROP   -> CENTER_INSIDE
