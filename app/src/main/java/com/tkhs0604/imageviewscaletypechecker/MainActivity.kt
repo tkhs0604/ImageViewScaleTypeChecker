@@ -1,5 +1,6 @@
 package com.tkhs0604.imageviewscaletypechecker
 
+import android.graphics.Matrix
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun switchScaleType(imageView: ImageView) {
-        imageView.imageMatrix = null
+        imageView.imageMatrix = Matrix()
         imageView.scaleType = when (imageView.scaleType) {
             CENTER        -> CENTER_CROP
             CENTER_CROP   -> CENTER_INSIDE
